@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruby Media | Professional Web Development</title>
+    <title>RubyMedia | Professional Web Development</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -35,12 +35,25 @@
 
     <!-- Hero 区域 -->
     <header class="hero">
+        <div class="code-bg" aria-hidden="true"></div>
+        <div class="floating-icons" aria-hidden="true">
+            <span class="float-icon">⚛️</span>
+            <span class="float-icon">🔷</span>
+            <span class="float-icon">🟨</span>
+            <span class="float-icon">🐍</span>
+            <span class="float-icon">☁️</span>
+            <span class="float-icon">🔥</span>
+        </div>
         <div class="container">
-            <h1 data-i18n="hero.title">Crafting Digital Excellence</h1>
-            <p data-i18n="hero.subtitle">We are a professional web development team, creating unique online presence for your brand</p>
+            <div class="hero-badge" data-i18n="hero.badge">Full-Stack Development Agency</div>
+            <h1 data-i18n="hero.title">We Build Digital Products That Matter</h1>
+            <p data-i18n="hero.subtitle">From concept to deployment — React, Vue, Node.js, Python, and beyond. We speak your tech language.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Start Project</a>
-                <a href="#portfolio" class="btn btn-secondary" data-i18n="hero.portfolio">View Portfolio</a>
+                <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Start Your Project</a>
+                <a href="#tech" class="btn btn-secondary" data-i18n="hero.tech">Our Tech Stack</a>
+            </div>
+            <div class="hero-clients">
+                <span data-i18n="hero.trusted">Trusted by startups and enterprises across APAC</span>
             </div>
         </div>
     </header>
@@ -69,6 +82,61 @@
                     <div class="service-icon">🚀</div>
                     <h3 data-i18n="services.seo.title">SEO Optimization</h3>
                     <p data-i18n="services.seo.desc">Search engine optimization services to increase visibility and traffic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术栈 -->
+    <section id="tech" class="tech-stack">
+        <div class="container">
+            <h2 class="section-title" data-i18n="tech.title">Technology Stack</h2>
+            <p class="section-subtitle" data-i18n="tech.subtitle">We leverage modern technologies to build fast, secure, and scalable solutions</p>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3 data-i18n="tech.frontend">Frontend</h3>
+                    <div class="tech-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                        <span>React</span>
+                        <span>Vue.js</span>
+                        <span>Next.js</span>
+                        <span>Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3 data-i18n="tech.backend">Backend</h3>
+                    <div class="tech-tags">
+                        <span>Node.js</span>
+                        <span>Python</span>
+                        <span>PHP</span>
+                        <span>Java</span>
+                        <span>Express</span>
+                        <span>Django</span>
+                        <span>Laravel</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3 data-i18n="tech.database">Database</h3>
+                    <div class="tech-tags">
+                        <span>MySQL</span>
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>Redis</span>
+                        <span>Firebase</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3 data-i18n="tech.cloud">Cloud & DevOps</h3>
+                    <div class="tech-tags">
+                        <span>AWS</span>
+                        <span>Google Cloud</span>
+                        <span>Vercel</span>
+                        <span>Docker</span>
+                        <span>Cloudflare</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -191,7 +259,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Ruby Media. All rights reserved.</p>
+                <p>&copy; 2024 RubyMedia. All rights reserved.</p>
             </div>
         </div>
     </footer>

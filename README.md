@@ -1,4 +1,4 @@
-# Ruby Media
+# RubyMedia
 
 Professional Web Development Company Website
 
