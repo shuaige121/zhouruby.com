@@ -3,193 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RubyMedia | Professional Web Development</title>
+    <title>RubyMedia | AI-Powered Web Agency</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="container nav-inner">
             <a href="#" class="logo"><span class="logo-ruby">Ruby</span>Media</a>
-            <ul class="nav-links">
-                <li><a href="#services" data-i18n="nav.services">Services</a></li>
-                <li><a href="#tech" data-i18n="nav.tech">Tech</a></li>
-                <li><a href="#contact" class="btn-nav" data-i18n="nav.contact">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <div class="lang-switcher">
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="zh">中文</button>
-                    <button class="lang-btn" data-lang="ms">BM</button>
-                    <button class="lang-btn" data-lang="ta">தமிழ்</button>
-                </div>
-                <button class="mobile-menu-btn" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <div class="nav-menu">
+                <a href="#services">Services</a>
+                <a href="#tech">Tech</a>
+                <a href="#samples">Samples</a>
+                <a href="https://wa.me/6582376302" class="nav-cta" target="_blank">Contact</a>
+            </div>
+            <div class="lang-switch">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="zh">中文</button>
+                <button class="lang-btn" data-lang="ms">BM</button>
+                <button class="lang-btn" data-lang="ta">தமிழ்</button>
             </div>
         </div>
     </nav>
 
-    <!-- Three.js 3D Background -->
-    <canvas id="bg-canvas"></canvas>
-
-    <!-- Hero 区域 -->
+    <!-- Hero -->
     <header class="hero">
-        <div class="container">
-            <div class="hero-badge" data-i18n="hero.badge">Full-Stack Development Agency</div>
-            <h1 data-i18n="hero.title">We Build Digital Products That Matter</h1>
-            <p data-i18n="hero.subtitle">From concept to deployment — React, Vue, Node.js, Python, and beyond. We speak your tech language.</p>
-            <div class="hero-buttons">
-                <a href="https://wa.me/6582376302" class="btn btn-primary" target="_blank">WhatsApp Me Now</a>
-            </div>
+        <div class="container hero-content">
+            <span class="badge">AI-Powered Web Agency</span>
+            <h1>Websites Built<br>at Lightning Speed</h1>
+            <p>Lowest price. Fastest delivery. Cutting-edge tech.</p>
+            <a href="https://wa.me/6582376302" class="btn" target="_blank">WhatsApp Us</a>
         </div>
     </header>
 
-    <!-- 服务介绍 -->
-    <section id="services" class="services">
+    <!-- Services -->
+    <section id="services" class="section">
         <div class="container">
-            <h2 class="section-title" data-i18n="services.title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3 data-i18n="services.design.title">UI/UX Design</h3>
-                    <p data-i18n="services.design.desc">User-centered design philosophy, creating beautiful and intuitive interfaces</p>
+            <h2 class="section-title">Services</h2>
+            <div class="grid-4">
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful, intuitive interfaces</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3 data-i18n="services.web.title">Web Development</h3>
-                    <p data-i18n="services.web.desc">Responsive website development, ensuring perfect display on all devices</p>
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Fast, responsive websites</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🛒</div>
-                    <h3 data-i18n="services.ecommerce.title">E-Commerce Solutions</h3>
-                    <p data-i18n="services.ecommerce.desc">Full-featured online stores to help grow your business</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h3 data-i18n="services.seo.title">SEO Optimization</h3>
-                    <p data-i18n="services.seo.desc">Search engine optimization services to increase visibility and traffic</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 技术栈 -->
-    <section id="tech" class="tech-stack">
-        <div class="container">
-            <h2 class="section-title" data-i18n="tech.title">Technology Stack</h2>
-            <p class="section-subtitle" data-i18n="tech.subtitle">We leverage modern technologies to build fast, secure, and scalable solutions</p>
-            <div class="tech-grid">
-                <div class="tech-category">
-                    <h3 data-i18n="tech.frontend">Frontend</h3>
-                    <div class="tech-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>TypeScript</span>
-                        <span>React</span>
-                        <span>Vue.js</span>
-                        <span>Next.js</span>
-                        <span>Tailwind CSS</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3 data-i18n="tech.backend">Backend</h3>
-                    <div class="tech-tags">
-                        <span>Node.js</span>
-                        <span>Python</span>
-                        <span>PHP</span>
-                        <span>Java</span>
-                        <span>Express</span>
-                        <span>Django</span>
-                        <span>Laravel</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3 data-i18n="tech.database">Database</h3>
-                    <div class="tech-tags">
-                        <span>MySQL</span>
-                        <span>PostgreSQL</span>
-                        <span>MongoDB</span>
-                        <span>Redis</span>
-                        <span>Firebase</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3 data-i18n="tech.cloud">Cloud & DevOps</h3>
-                    <div class="tech-tags">
-                        <span>AWS</span>
-                        <span>Google Cloud</span>
-                        <span>Vercel</span>
-                        <span>Docker</span>
-                        <span>Cloudflare</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 案例展示 -->
-    <section id="samples" class="samples">
-        <div class="container">
-            <h2 class="section-title" data-i18n="samples.title">Sample Templates</h2>
-            <div class="samples-grid">
-                <a href="samples/corporate/" class="sample-item" target="_blank">
-                    <div class="sample-preview" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);"></div>
-                    <h3>Corporate</h3>
-                </a>
-                <a href="samples/ecommerce/" class="sample-item" target="_blank">
-                    <div class="sample-preview" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);"></div>
+                <div class="card">
+                    <div class="card-icon">🛒</div>
                     <h3>E-Commerce</h3>
+                    <p>Online stores that convert</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>SEO & Performance</h3>
+                    <p>Rank higher, load faster</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech -->
+    <section id="tech" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="grid-4">
+                <div class="tech-card">
+                    <h4>Frontend</h4>
+                    <div class="tags">
+                        <span>React</span><span>Vue</span><span>Next.js</span><span>Tailwind</span>
+                    </div>
+                </div>
+                <div class="tech-card">
+                    <h4>Backend</h4>
+                    <div class="tags">
+                        <span>Node.js</span><span>Python</span><span>PHP</span><span>Laravel</span>
+                    </div>
+                </div>
+                <div class="tech-card">
+                    <h4>Database</h4>
+                    <div class="tags">
+                        <span>MySQL</span><span>MongoDB</span><span>PostgreSQL</span><span>Redis</span>
+                    </div>
+                </div>
+                <div class="tech-card">
+                    <h4>Cloud</h4>
+                    <div class="tags">
+                        <span>AWS</span><span>Vercel</span><span>Cloudflare</span><span>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Samples -->
+    <section id="samples" class="section">
+        <div class="container">
+            <h2 class="section-title">Sample Templates</h2>
+            <div class="grid-4">
+                <a href="samples/corporate/" class="sample-card" target="_blank">
+                    <div class="sample-img" style="background: linear-gradient(135deg, #1a1a2e, #16213e);"></div>
+                    <span>Corporate</span>
                 </a>
-                <a href="samples/restaurant/" class="sample-item" target="_blank">
-                    <div class="sample-preview" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);"></div>
-                    <h3>Restaurant</h3>
+                <a href="samples/ecommerce/" class="sample-card" target="_blank">
+                    <div class="sample-img" style="background: linear-gradient(135deg, #fce4ec, #f8bbd9);"></div>
+                    <span>E-Commerce</span>
                 </a>
-                <a href="samples/portfolio/" class="sample-item" target="_blank">
-                    <div class="sample-preview" style="background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);"></div>
-                    <h3>Portfolio</h3>
+                <a href="samples/restaurant/" class="sample-card" target="_blank">
+                    <div class="sample-img" style="background: linear-gradient(135deg, #0a0a0a, #1a1a1a);"></div>
+                    <span>Restaurant</span>
+                </a>
+                <a href="samples/portfolio/" class="sample-card" target="_blank">
+                    <div class="sample-img" style="background: linear-gradient(135deg, #111, #222);"></div>
+                    <span>Portfolio</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 联系我们 -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
-            <a href="https://wa.me/6582376302" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsapp">WhatsApp</a>
+    <!-- Contact -->
+    <section id="contact" class="section section-dark">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Ready to Start?</h2>
+            <a href="https://wa.me/6582376302" class="btn" target="_blank">WhatsApp Us</a>
         </div>
     </section>
 
-    <!-- 页脚 -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo"><span class="logo-ruby">Ruby</span>Media</a>
-                    <p data-i18n="footer.tagline">Crafting Digital Excellence</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#services" data-i18n="nav.services">Services</a>
-                    <a href="#tech" data-i18n="nav.tech">Tech</a>
-                    <a href="#contact" data-i18n="nav.contact">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 RubyMedia. All rights reserved.</p>
-            </div>
+        <div class="container footer-inner">
+            <span class="logo"><span class="logo-ruby">Ruby</span>Media</span>
+            <span>© 2024 RubyMedia</span>
         </div>
     </footer>
 
-    <!-- WhatsApp 浮动按钮 -->
-    <a href="https://wa.me/6582376302" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-        <svg viewBox="0 0 32 32" fill="currentColor">
-            <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.96C9.726 30.986 12.762 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.294 22.608c-.39 1.096-1.93 2.006-3.168 2.272-.848.18-1.956.324-5.684-1.222-4.77-1.978-7.836-6.83-8.072-7.146-.228-.316-1.87-2.492-1.87-4.754 0-2.262 1.184-3.374 1.604-3.836.39-.428 1.024-.618 1.632-.618.198 0 .376.01.536.018.462.02.694.048 1 .77.382.902 1.312 3.198 1.428 3.432.118.234.232.55.07.866-.152.324-.228.526-.458.81-.228.284-.48.634-.686.852-.228.244-.466.508-.2.998.266.488 1.184 1.952 2.542 3.162 1.746 1.556 3.218 2.038 3.674 2.264.456.226.724.188.99-.114.274-.31 1.168-1.36 1.48-1.828.304-.468.618-.39 1.042-.234.428.152 2.712 1.278 3.176 1.51.462.234.77.35.884.544.116.194.116 1.126-.274 2.222z"/>
-        </svg>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/6582376302" class="wa-float" target="_blank">
+        <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.2 0 0 7.2 0 16c0 3.2 1 6.2 2.7 8.7L.9 31.4l7-1.8c2.4 1.5 5.2 2.4 8.1 2.4 8.8 0 16-7.2 16-16S24.8 0 16 0zm9 22.4c-.4 1-1.8 1.9-3 2.1-.8.2-1.8.3-5.4-1.2-4.5-1.9-7.4-6.5-7.6-6.8-.2-.3-1.8-2.4-1.8-4.5s1.1-3.2 1.5-3.6c.4-.4 1-.6 1.5-.6h.5c.4 0 .7 0 1 .7.4.9 1.2 3 1.3 3.3.1.2.2.5.1.8-.2.3-.2.5-.4.8-.2.3-.5.6-.6.8-.2.2-.4.5-.2 1 .3.5 1.1 1.9 2.4 3 1.7 1.5 3 2 3.5 2.2.4.2.7.2.9-.1.3-.3 1.1-1.3 1.4-1.7.3-.4.6-.4 1-.2.4.1 2.6 1.2 3 1.4.4.2.7.3.8.5.1.2.1 1.1-.3 2.1z"/></svg>
     </a>
 
     <script src="js/main.js"></script>
