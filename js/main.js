@@ -5,12 +5,12 @@ const translations = {
         'nav.portfolio': 'Portfolio',
         'nav.about': 'About',
         'nav.contact': 'Contact',
-        'hero.badge': 'Full-Stack Development Agency',
-        'hero.title': 'We Build Digital Products That Matter',
-        'hero.subtitle': 'From concept to deployment — React, Vue, Node.js, Python, and beyond. We speak your tech language.',
-        'hero.cta': 'Start Your Project',
-        'hero.tech': 'Our Tech Stack',
-        'hero.trusted': 'Trusted by startups and enterprises across APAC',
+        'hero.badge': 'AI-Powered Web Agency',
+        'hero.title': 'Websites at Lightning Speed',
+        'hero.subtitle': 'Lowest price. Fastest delivery. Cutting-edge tech. We use AI to build your website in days, not months.',
+        'hero.cta': 'Get Started',
+        'hero.tech': 'See Tech Stack',
+        'hero.trusted': 'Game-changing web development for the AI era',
         'services.title': 'Our Services',
         'services.design.title': 'UI/UX Design',
         'services.design.desc': 'Figma, Adobe XD, Prototyping. User research and wireframing to pixel-perfect interfaces.',
@@ -41,27 +41,21 @@ const translations = {
         'about.clients': 'Happy Clients',
         'about.years': 'Years Experience',
         'contact.title': 'Contact Us',
-        'contact.email': 'Email',
-        'contact.phone': 'WhatsApp',
-        'contact.address': 'Location',
-        'contact.form.name': 'Your Name',
-        'contact.form.email': 'Your Email',
-        'contact.form.message': 'Tell us about your project',
-        'contact.form.submit': 'Send Message',
+        'contact.subtitle': 'Ready to start your project? Let\'s talk.',
+        'contact.whatsapp': 'Chat on WhatsApp',
         'footer.tagline': 'Building Digital Excellence',
-        'form.success': 'Thank you! We\'ll get back to you within 24 hours.'
     },
     zh: {
         'nav.services': '服务',
         'nav.portfolio': '案例',
         'nav.about': '关于',
         'nav.contact': '联系',
-        'hero.badge': '全栈开发工作室',
-        'hero.title': '打造有影响力的数字产品',
-        'hero.subtitle': '从概念到部署 — React、Vue、Node.js、Python 全栈覆盖，我们与您技术同频。',
-        'hero.cta': '开始您的项目',
-        'hero.tech': '技术栈',
-        'hero.trusted': '服务亚太区众多初创企业与行业领军者',
+        'hero.badge': 'AI 驱动的建站公司',
+        'hero.title': '闪电速度交付网站',
+        'hero.subtitle': '最低价格 · 最快速度 · 最新技术。AI 赋能，几天交付，颠覆传统建站。',
+        'hero.cta': '立即开始',
+        'hero.tech': '查看技术栈',
+        'hero.trusted': 'AI 时代的游戏规则改变者',
         'services.title': '我们的服务',
         'services.design.title': 'UI/UX 设计',
         'services.design.desc': 'Figma、Adobe XD、原型设计。从用户研究、线框图到像素级精美界面。',
@@ -92,13 +86,8 @@ const translations = {
         'about.clients': '合作客户',
         'about.years': '年经验',
         'contact.title': '联系我们',
-        'contact.email': '邮箱',
-        'contact.phone': 'WhatsApp',
-        'contact.address': '地址',
-        'contact.form.name': '您的姓名',
-        'contact.form.email': '您的邮箱',
-        'contact.form.message': '请描述您的项目需求',
-        'contact.form.submit': '发送消息',
+        'contact.subtitle': '准备开始您的项目？让我们聊聊。',
+        'contact.whatsapp': 'WhatsApp 咨询',
         'footer.tagline': '打造卓越数字体验',
         'form.success': '感谢留言！我们将在 24 小时内回复您。'
     },
@@ -107,12 +96,12 @@ const translations = {
         'nav.portfolio': 'Portfolio',
         'nav.about': 'Tentang Kami',
         'nav.contact': 'Hubungi',
-        'hero.badge': 'Agensi Pembangunan Full-Stack',
-        'hero.title': 'Kami Membina Produk Digital Yang Bermakna',
-        'hero.subtitle': 'Dari konsep hingga pelancaran — React, Vue, Node.js, Python dan banyak lagi. Kami bercakap bahasa teknologi anda.',
-        'hero.cta': 'Mulakan Projek Anda',
-        'hero.tech': 'Stack Teknologi',
-        'hero.trusted': 'Dipercayai oleh syarikat permulaan dan perusahaan di seluruh APAC',
+        'hero.badge': 'Agensi Web Berkuasa AI',
+        'hero.title': 'Laman Web Sepantas Kilat',
+        'hero.subtitle': 'Harga terendah. Penghantaran terpantas. Teknologi terkini. AI membina laman web anda dalam beberapa hari.',
+        'hero.cta': 'Mula Sekarang',
+        'hero.tech': 'Lihat Teknologi',
+        'hero.trusted': 'Mengubah permainan pembangunan web era AI',
         'services.title': 'Perkhidmatan Kami',
         'services.design.title': 'Reka Bentuk UI/UX',
         'services.design.desc': 'Figma, Adobe XD, Prototaip. Kajian pengguna dan wireframe hingga antara muka pixel-perfect.',
@@ -143,13 +132,8 @@ const translations = {
         'about.clients': 'Pelanggan Gembira',
         'about.years': 'Tahun Pengalaman',
         'contact.title': 'Hubungi Kami',
-        'contact.email': 'E-mel',
-        'contact.phone': 'WhatsApp',
-        'contact.address': 'Lokasi',
-        'contact.form.name': 'Nama Anda',
-        'contact.form.email': 'E-mel Anda',
-        'contact.form.message': 'Ceritakan tentang projek anda',
-        'contact.form.submit': 'Hantar Mesej',
+        'contact.subtitle': 'Bersedia untuk memulakan projek anda? Mari bercakap.',
+        'contact.whatsapp': 'Sembang di WhatsApp',
         'footer.tagline': 'Membina Kecemerlangan Digital',
         'form.success': 'Terima kasih! Kami akan menghubungi anda dalam 24 jam.'
     },
@@ -158,12 +142,12 @@ const translations = {
         'nav.portfolio': 'படைப்புகள்',
         'nav.about': 'எங்களைப் பற்றி',
         'nav.contact': 'தொடர்பு',
-        'hero.badge': 'முழு அடுக்கு மேம்பாட்டு ஏஜென்சி',
-        'hero.title': 'முக்கியமான டிஜிட்டல் தயாரிப்புகளை உருவாக்குகிறோம்',
-        'hero.subtitle': 'கருத்தாக்கம் முதல் வெளியீடு வரை — React, Vue, Node.js, Python மற்றும் பல. உங்கள் தொழில்நுட்ப மொழியை நாங்கள் பேசுகிறோம்.',
-        'hero.cta': 'உங்கள் திட்டத்தைத் தொடங்குங்கள்',
-        'hero.tech': 'தொழில்நுட்ப அடுக்கு',
-        'hero.trusted': 'APAC முழுவதும் உள்ள நிறுவனங்களால் நம்பப்படுகிறது',
+        'hero.badge': 'AI-இயக்கும் வலை ஏஜென்சி',
+        'hero.title': 'மின்னல் வேகத்தில் வலைத்தளங்கள்',
+        'hero.subtitle': 'குறைந்த விலை. வேகமான டெலிவரி. சமீபத்திய தொழில்நுட்பம். AI உங்கள் வலைத்தளத்தை நாட்களில் உருவாக்குகிறது.',
+        'hero.cta': 'இப்போது தொடங்கு',
+        'hero.tech': 'தொழில்நுட்பம் காண்க',
+        'hero.trusted': 'AI சகாப்தத்தின் கேம் சேஞ்சர்',
         'services.title': 'எங்கள் சேவைகள்',
         'services.design.title': 'UI/UX வடிவமைப்பு',
         'services.design.desc': 'Figma, Adobe XD, முன்மாதிரி. பயனர் ஆராய்ச்சி முதல் பிக்சல்-சரியான இடைமுகங்கள் வரை.',
@@ -194,13 +178,8 @@ const translations = {
         'about.clients': 'வாடிக்கையாளர்கள்',
         'about.years': 'ஆண்டுகள்',
         'contact.title': 'எங்களைத் தொடர்புகொள்ளுங்கள்',
-        'contact.email': 'மின்னஞ்சல்',
-        'contact.phone': 'WhatsApp',
-        'contact.address': 'இடம்',
-        'contact.form.name': 'உங்கள் பெயர்',
-        'contact.form.email': 'உங்கள் மின்னஞ்சல்',
-        'contact.form.message': 'உங்கள் திட்டத்தைப் பற்றி சொல்லுங்கள்',
-        'contact.form.submit': 'செய்தி அனுப்பு',
+        'contact.subtitle': 'உங்கள் திட்டத்தைத் தொடங்க தயாரா? பேசுவோம்.',
+        'contact.whatsapp': 'WhatsApp இல் அரட்டை',
         'footer.tagline': 'டிஜிட்டல் சிறப்பை உருவாக்குதல்',
         'form.success': 'நன்றி! 24 மணி நேரத்தில் தொடர்புகொள்வோம்.'
     }
@@ -282,20 +261,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form submission
-const contactForm = document.getElementById('contactForm');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-
-    console.log('Form submitted:', data);
-
-    alert(translations[currentLang]['form.success']);
-    contactForm.reset();
-});
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
