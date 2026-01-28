@@ -551,7 +551,7 @@ h3 { font-size: 1.25rem; }
 
 /* Contact */
 .contact {
-    padding: 100px 0;
+    padding: 80px 0;
     background: var(--dark);
     color: var(--white);
     text-align: center;
@@ -559,37 +559,16 @@ h3 { font-size: 1.25rem; }
 
 .contact .section-title {
     color: var(--white);
+    margin-bottom: 30px;
 }
 
-.contact-subtitle {
-    color: var(--gray);
-    font-size: 1.2rem;
-    margin: -30px 0 50px;
-}
-
-.btn-whatsapp-large {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
+.btn-whatsapp {
     background: var(--whatsapp);
     color: var(--white);
-    padding: 20px 50px;
-    border-radius: 50px;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
 }
 
-.btn-whatsapp-large svg {
-    width: 32px;
-    height: 32px;
-}
-
-.btn-whatsapp-large:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 50px rgba(37, 211, 102, 0.5);
+.btn-whatsapp:hover {
+    background: #1da851;
 }
 
 /* Footer */
