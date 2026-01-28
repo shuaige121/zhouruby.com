@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Media | Professional Web Development</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Ruby<span>Media</span></a>
+            <ul class="nav-links">
+                <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#contact" class="btn-nav" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                    <button class="lang-btn" data-lang="ms">BM</button>
+                    <button class="lang-btn" data-lang="ta">தமிழ்</button>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <header class="hero">
+        <div class="container">
+            <h1 data-i18n="hero.title">Crafting Digital Excellence</h1>
+            <p data-i18n="hero.subtitle">We are a professional web development team, creating unique online presence for your brand</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Start Project</a>
+                <a href="#portfolio" class="btn btn-secondary" data-i18n="hero.portfolio">View Portfolio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 服务介绍 -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services.title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3 data-i18n="services.design.title">UI/UX Design</h3>
+                    <p data-i18n="services.design.desc">User-centered design philosophy, creating beautiful and intuitive interfaces</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3 data-i18n="services.web.title">Web Development</h3>
+                    <p data-i18n="services.web.desc">Responsive website development, ensuring perfect display on all devices</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛒</div>
+                    <h3 data-i18n="services.ecommerce.title">E-Commerce Solutions</h3>
+                    <p data-i18n="services.ecommerce.desc">Full-featured online stores to help grow your business</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3 data-i18n="services.seo.title">SEO Optimization</h3>
+                    <p data-i18n="services.seo.desc">Search engine optimization services to increase visibility and traffic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例展示 -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title" data-i18n="portfolio.title">Featured Works</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="portfolio-info">
+                        <h3 data-i18n="portfolio.tech.title">Tech Company Website</h3>
+                        <p data-i18n="portfolio.tech.cat">Corporate Website</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="portfolio-info">
+                        <h3 data-i18n="portfolio.fashion.title">Fashion E-Commerce</h3>
+                        <p data-i18n="portfolio.fashion.cat">E-Commerce</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="portfolio-info">
+                        <h3 data-i18n="portfolio.fnb.title">F&B Brand Website</h3>
+                        <p data-i18n="portfolio.fnb.cat">Brand Showcase</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                    <div class="portfolio-info">
+                        <h3 data-i18n="portfolio.edu.title">Education Platform</h3>
+                        <p data-i18n="portfolio.edu.cat">Online Education</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-i18n="about.title">About Us</h2>
+                    <p data-i18n="about.desc">Ruby Media was established in 2020, a creative studio specializing in website design and development. We believe great design brings value to brands, committed to creating unique digital experiences for every client.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label" data-i18n="about.projects">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label" data-i18n="about.clients">Clients</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label" data-i18n="about.years">Years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4 data-i18n="contact.email">Email</h4>
+                            <p>hello@rubymedia.sg</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <h4 data-i18n="contact.phone">Phone</h4>
+                            <p>+65 8237 6302</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4 data-i18n="contact.address">Address</h4>
+                            <p>Singapore</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" name="name" data-i18n-placeholder="contact.form.name" placeholder="Your Name" required>
+                    <input type="email" name="email" data-i18n-placeholder="contact.form.email" placeholder="Your Email" required>
+                    <textarea name="message" data-i18n-placeholder="contact.form.message" placeholder="Project Requirements" rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Ruby<span>Media</span></a>
+                    <p data-i18n="footer.tagline">Crafting Digital Excellence</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#services" data-i18n="nav.services">Services</a>
+                    <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+                    <a href="#about" data-i18n="nav.about">About</a>
+                    <a href="#contact" data-i18n="nav.contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ruby Media. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp 浮动按钮 -->
+    <a href="https://wa.me/6582376302" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" fill="currentColor">
+            <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.96C9.726 30.986 12.762 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.294 22.608c-.39 1.096-1.93 2.006-3.168 2.272-.848.18-1.956.324-5.684-1.222-4.77-1.978-7.836-6.83-8.072-7.146-.228-.316-1.87-2.492-1.87-4.754 0-2.262 1.184-3.374 1.604-3.836.39-.428 1.024-.618 1.632-.618.198 0 .376.01.536.018.462.02.694.048 1 .77.382.902 1.312 3.198 1.428 3.432.118.234.232.55.07.866-.152.324-.228.526-.458.81-.228.284-.48.634-.686.852-.228.244-.466.508-.2.998.266.488 1.184 1.952 2.542 3.162 1.746 1.556 3.218 2.038 3.674 2.264.456.226.724.188.99-.114.274-.31 1.168-1.36 1.48-1.828.304-.468.618-.39 1.042-.234.428.152 2.712 1.278 3.176 1.51.462.234.77.35.884.544.116.194.116 1.126-.274 2.222z"/>
+        </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
