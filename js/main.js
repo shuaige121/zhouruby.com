@@ -331,8 +331,190 @@ document.querySelectorAll('section, .service-card, .portfolio-item, .tech-catego
     observer.observe(el);
 });
 
-// Typing effect for hero (optional enhancement)
-const heroTitle = document.querySelector('.hero h1');
-if (heroTitle) {
-    heroTitle.style.opacity = '1';
+// ========== THREE.JS 3D BACKGROUND ==========
+function initThreeJS() {
+    const canvas = document.getElementById('bg-canvas');
+    if (!canvas || typeof THREE === 'undefined') return;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    // Create particles
+    const particlesGeometry = new THREE.BufferGeometry();
+    const particlesCount = 2000;
+    const posArray = new Float32Array(particlesCount * 3);
+
+    for (let i = 0; i < particlesCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 10;
+    }
+
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+    const particlesMaterial = new THREE.PointsMaterial({
+        size: 0.02,
+        color: 0xe31837,
+        transparent: true,
+        opacity: 0.8,
+        blending: THREE.AdditiveBlending
+    });
+
+    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+    scene.add(particlesMesh);
+
+    // Add floating geometric shapes
+    const shapes = [];
+    const geometries = [
+        new THREE.IcosahedronGeometry(0.3, 0),
+        new THREE.OctahedronGeometry(0.3, 0),
+        new THREE.TetrahedronGeometry(0.3, 0),
+        new THREE.TorusGeometry(0.2, 0.08, 8, 16)
+    ];
+
+    for (let i = 0; i < 8; i++) {
+        const geometry = geometries[i % geometries.length];
+        const material = new THREE.MeshBasicMaterial({
+            color: i % 2 === 0 ? 0xe31837 : 0x667eea,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.3
+        });
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.position.set(
+            (Math.random() - 0.5) * 8,
+            (Math.random() - 0.5) * 8,
+            (Math.random() - 0.5) * 4 - 2
+        );
+        mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
+        shapes.push({
+            mesh,
+            rotationSpeed: {
+                x: (Math.random() - 0.5) * 0.01,
+                y: (Math.random() - 0.5) * 0.01
+            },
+            floatSpeed: Math.random() * 0.5 + 0.5,
+            floatOffset: Math.random() * Math.PI * 2
+        });
+        scene.add(mesh);
+    }
+
+    camera.position.z = 3;
+
+    // Animation
+    let time = 0;
+    function animate() {
+        requestAnimationFrame(animate);
+        time += 0.01;
+
+        // Rotate particles
+        particlesMesh.rotation.y += 0.0005;
+        particlesMesh.rotation.x += 0.0002;
+
+        // Animate shapes
+        shapes.forEach((shape, i) => {
+            shape.mesh.rotation.x += shape.rotationSpeed.x;
+            shape.mesh.rotation.y += shape.rotationSpeed.y;
+            shape.mesh.position.y += Math.sin(time * shape.floatSpeed + shape.floatOffset) * 0.002;
+        });
+
+        renderer.render(scene, camera);
+    }
+
+    animate();
+
+    // Handle resize
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
 }
+
+// Initialize Three.js when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initThreeJS);
+} else {
+    initThreeJS();
+}
+
+// ========== ANIMATED COUNTER ==========
+function animateCounter(element, target, duration = 2000) {
+    const start = 0;
+    const startTime = performance.now();
+    const suffix = element.textContent.replace(/[\d]/g, '');
+
+    function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function (ease-out-expo)
+        const easeOutExpo = 1 - Math.pow(2, -10 * progress);
+        const current = Math.floor(start + (target - start) * easeOutExpo);
+
+        element.textContent = current + suffix;
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        }
+    }
+
+    requestAnimationFrame(update);
+}
+
+// Observe stat numbers for counter animation
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+            entry.target.dataset.animated = 'true';
+            const text = entry.target.textContent;
+            const number = parseInt(text.replace(/\D/g, ''));
+            if (number) {
+                animateCounter(entry.target, number, 2500);
+            }
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-number').forEach(el => {
+    counterObserver.observe(el);
+});
+
+// ========== TILT EFFECT ON CARDS (non-following) ==========
+document.querySelectorAll('.service-card, .tech-category').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) rotateX(5deg) rotateY(-5deg)';
+    });
+
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+    });
+});
+
+// ========== MAGNETIC BUTTONS ==========
+document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        this.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+    });
+
+    btn.addEventListener('mouseleave', function() {
+        this.style.transform = 'translate(0, 0)';
+    });
+});
+
+// ========== SMOOTH REVEAL ON SCROLL ==========
+const revealElements = document.querySelectorAll('.hero h1, .hero p, .hero-badge, .hero-buttons');
+revealElements.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    setTimeout(() => {
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+    }, 200 + i * 150);
+});
