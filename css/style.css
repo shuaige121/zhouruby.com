@@ -1,7 +1,8 @@
 /* CSS Variables */
 :root {
-    --primary: #e31837;
-    --primary-dark: #c41230;
+    --primary: #e0115f;
+    --primary-dark: #9b111e;
+    --ruby: linear-gradient(135deg, #ff1744 0%, #e0115f 25%, #9b111e 50%, #e0115f 75%, #ff1744 100%);
     --secondary: #64748b;
     --dark: #0f172a;
     --light: #f8fafc;
@@ -89,14 +90,32 @@ h3 { font-size: 1.25rem; }
 }
 
 .btn-primary {
-    background: var(--primary);
+    background: linear-gradient(135deg, #e0115f 0%, #9b111e 100%);
     color: var(--white);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
+    background: linear-gradient(135deg, #ff1744 0%, #e0115f 100%);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 30px rgba(224, 17, 95, 0.4);
 }
 
 .btn-secondary {
@@ -142,11 +161,40 @@ h3 { font-size: 1.25rem; }
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
-    color: var(--dark);
+    color: var(--white);
 }
 
 .logo span {
-    color: var(--primary);
+    color: var(--white);
+    opacity: 0.9;
+}
+
+/* Ruby Gem Text Effect */
+.logo-ruby {
+    background: linear-gradient(
+        135deg,
+        #ff4d6d 0%,
+        #e0115f 20%,
+        #ff8fa3 40%,
+        #e0115f 50%,
+        #9b111e 60%,
+        #e0115f 80%,
+        #ff4d6d 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: ruby-shine 3s ease-in-out infinite;
+    text-shadow: none;
+    filter: drop-shadow(0 0 8px rgba(224, 17, 95, 0.5));
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+@keyframes ruby-shine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 .nav-links {
@@ -420,7 +468,10 @@ h3 { font-size: 1.25rem; }
 }
 
 .tech-category h3 {
-    color: var(--primary);
+    background: linear-gradient(135deg, #ff4d6d 0%, #e0115f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 20px;
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -434,20 +485,22 @@ h3 { font-size: 1.25rem; }
 }
 
 .tech-tags span {
-    background: rgba(227, 24, 55, 0.2);
-    color: #ff6b6b;
+    background: rgba(224, 17, 95, 0.15);
+    color: #ff4d6d;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 500;
     transition: var(--transition);
     cursor: default;
+    border: 1px solid rgba(224, 17, 95, 0.3);
 }
 
 .tech-tags span:hover {
-    background: var(--primary);
+    background: linear-gradient(135deg, #e0115f 0%, #9b111e 100%);
     color: var(--white);
     transform: scale(1.05);
+    border-color: transparent;
 }
 
 /* Portfolio */
