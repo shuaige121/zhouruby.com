@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleShop - E-Commerce Sample</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fafafa; }
+        .nav { background: #fff; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .nav-logo { font-size: 1.5rem; font-weight: 700; color: #e91e63; }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { color: #333; text-decoration: none; }
+        .nav-cart { background: #e91e63; color: #fff; padding: 8px 20px; border-radius: 20px; }
+        .hero { background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%); padding: 80px 50px; text-align: center; }
+        .hero h1 { font-size: 3rem; color: #333; margin-bottom: 15px; }
+        .hero p { color: #666; margin-bottom: 30px; }
+        .btn { padding: 15px 40px; background: #e91e63; color: #fff; border: none; border-radius: 25px; font-size: 1rem; cursor: pointer; }
+        .products { padding: 60px 50px; max-width: 1200px; margin: 0 auto; }
+        .products h2 { text-align: center; margin-bottom: 40px; color: #333; }
+        .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+        .product { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
+        .product-img { height: 200px; background: linear-gradient(45deg, #f8bbd9, #e1bee7); }
+        .product-info { padding: 20px; }
+        .product-info h3 { font-size: 1rem; margin-bottom: 10px; }
+        .product-info .price { color: #e91e63; font-weight: 700; font-size: 1.2rem; }
+        .sample-badge { position: fixed; top: 20px; right: 20px; background: #e91e63; color: #fff; padding: 10px 20px; border-radius: 5px; font-size: 0.9rem; z-index: 1000; }
+    </style>
+</head>
+<body>
+    <div class="sample-badge">Sample by RubyMedia</div>
+    <nav class="nav">
+        <div class="nav-logo">StyleShop</div>
+        <ul class="nav-links">
+            <li><a href="#">New</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Sale</a></li>
+        </ul>
+        <span class="nav-cart">Cart (0)</span>
+    </nav>
+    <header class="hero">
+        <h1>New Season Arrivals</h1>
+        <p>Discover the latest trends in fashion</p>
+        <button class="btn">Shop Now</button>
+    </header>
+    <section class="products">
+        <h2>Best Sellers</h2>
+        <div class="product-grid">
+            <div class="product"><div class="product-img"></div><div class="product-info"><h3>Summer Dress</h3><span class="price">$89</span></div></div>
+            <div class="product"><div class="product-img"></div><div class="product-info"><h3>Classic Blazer</h3><span class="price">$129</span></div></div>
+            <div class="product"><div class="product-img"></div><div class="product-info"><h3>Silk Blouse</h3><span class="price">$79</span></div></div>
+            <div class="product"><div class="product-img"></div><div class="product-info"><h3>Denim Jacket</h3><span class="price">$99</span></div></div>
+        </div>
+    </section>
+</body>
+</html>

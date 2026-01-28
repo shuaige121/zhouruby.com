@@ -602,6 +602,43 @@ h3 { font-size: 1.25rem; }
     color: var(--secondary);
 }
 
+/* Samples */
+.samples {
+    padding: 100px 0;
+    background: var(--light);
+}
+
+.samples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.sample-item {
+    text-decoration: none;
+    color: var(--dark);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.sample-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.sample-preview {
+    height: 180px;
+}
+
+.sample-item h3 {
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
 /* Contact */
 .contact {
     padding: 80px 0;
