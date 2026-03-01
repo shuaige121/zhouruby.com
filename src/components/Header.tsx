@@ -58,7 +58,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative h-[50px] w-[50px] flex-shrink-0 overflow-hidden rounded-full shadow-md ring-2 ring-brand-green/30 transition group-hover:ring-brand-green/60">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-transparent.png"
               alt="Ruby's Music Rainforest"
               fill
               className="object-cover"

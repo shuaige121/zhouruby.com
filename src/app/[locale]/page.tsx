@@ -46,7 +46,7 @@ export default function HomePage() {
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-transparent.png"
               alt="Ruby's Music Rainforest Logo"
               width={200}
               height={200}
