@@ -9,12 +9,14 @@ import LanguageSwitcher from './LanguageSwitcher';
 interface NavItem {
   key: string;
   href: string;
+  external?: boolean;
 }
 
 const navItems: NavItem[] = [
   { key: 'about', href: '/#about' },
   { key: 'courses', href: '/courses' },
   { key: 'showcase', href: '/courses#results' },
+  { key: 'arranger', href: '/arranger/', external: true },
   { key: 'book', href: '/book' },
 ];
 
@@ -71,15 +73,25 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-1 md:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.key}
-              href={item.href}
-              className="rounded-lg px-3 py-2 font-body text-sm font-semibold text-brand-black transition hover:bg-brand-green/10 hover:text-brand-green-dark lg:px-4 lg:text-base"
-            >
-              {t(item.key)}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.external ? (
+              <a
+                key={item.key}
+                href={item.href}
+                className="rounded-lg px-3 py-2 font-body text-sm font-semibold text-brand-black transition hover:bg-brand-green/10 hover:text-brand-green-dark lg:px-4 lg:text-base"
+              >
+                {t(item.key)}
+              </a>
+            ) : (
+              <Link
+                key={item.key}
+                href={item.href}
+                className="rounded-lg px-3 py-2 font-body text-sm font-semibold text-brand-black transition hover:bg-brand-green/10 hover:text-brand-green-dark lg:px-4 lg:text-base"
+              >
+                {t(item.key)}
+              </Link>
+            )
+          )}
         </div>
 
         {/* Desktop Language Switcher */}
@@ -129,16 +141,27 @@ export default function Header() {
         }`}
       >
         <div className="flex flex-col gap-2 px-6 pt-20">
-          {navItems.map((item) => (
-            <Link
-              key={item.key}
-              href={item.href}
-              onClick={() => setMobileOpen(false)}
-              className="rounded-lg px-4 py-3 font-body text-base font-semibold text-brand-black transition hover:bg-brand-green/10 hover:text-brand-green-dark"
-            >
-              {t(item.key)}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.external ? (
+              <a
+                key={item.key}
+                href={item.href}
+                onClick={() => setMobileOpen(false)}
+                className="rounded-lg px-4 py-3 font-body text-base font-semibold text-brand-black transition hover:bg-brand-green/10 hover:text-brand-green-dark"
+              >
+                {t(item.key)}
+              </a>
+            ) : (
+              <Link
+                key={item.key}
+                href={item.href}
+                onClick={() => setMobileOpen(false)}
+                className="rounded-lg px-4 py-3 font-body text-base font-semibold text-brand-black transition hover:bg-brand-green/10 hover:text-brand-green-dark"
+              >
+                {t(item.key)}
+              </Link>
+            )
+          )}
           <div className="mt-4 border-t border-gray-100 pt-4">
             <LanguageSwitcher />
           </div>
